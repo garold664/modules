@@ -1,0 +1,5 @@
+BEM block: .block
+
+BEM element:  .block__elem
+
+BEM modificator: .block_modificator, .block__elem_modificator
