@@ -1,28 +1,53 @@
 .page-header {
+
+/*
   .outline(#f00,'.page-header', 60);
-  /*
-  background-color: #1d2631;
+
   background-image: url(../img/bg-back-mobile.jpg);
   */
+  &__nav-wrapper {/*
+   background-color: #1d2631;
+   */
+  }
   &__head-line {
-    .outline(#0f0,'.page-header__head-line', 40);
     .clearfix;
-    padding: 20px;
+    padding: 24px 20px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px #485360;
     /*
     background-color: #1d2631;
     opacity: 0.5;
     */
   }
   &__head-line-wrapper {
-    .outline(#f00,'__head-line-wrapper');
     .container;
     .clearfix;
   }
   &__nav-button {
-    .outline(#f50,'__nav-button');
-    width: 50px;
-    height: 24px;
     float: right;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  &__nav-button:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    height: 5px;
+    width: 30px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+  &__nav-button:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 5px;
+    background: #fff;
+    top: -5px;
+    left: 16px;
+    transform: rotate(45deg);
   }
   &__container {
     .container;
@@ -31,20 +56,26 @@
     flex-wrap: wrap;
   }
   &__slogan {
-    .outline(#0f9, '.page-header__slogan');
     min-height: 90px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+    padding: 28px 0 20px;
     color: #fff;
-    &_form {
-      min-height: 172px;
-    }
     &_photo {
       min-height: 172px;
     }
   }
+  .form-page &__slogan {
+    padding-bottom: 50px;
+  }
+  &__slogan-wrapper {
+    .container;
+  }
   &__pic {
-    .outline(#008,'.page-header__pic');
-    width: 257px;
-    height: 300px;
+    width: 258px;
+    height: 286px;
     margin-left: -20px;
   }
 }
@@ -60,19 +91,31 @@
     }
     &__container {
       max-height: 700px;
-      margin-top: 52px;
+      margin-top: 15px;
     }
     &__pic {
       order: 1;
+      opacity: 0;
+      margin-top: 32px;
       width: 470px;
       min-height: 570px;
-    margin-left: -150px;
+      margin-left: -150px;
     }
     &__slogan {
       width: 300px;
-      min-height: 200px;
-      &_form, &_photo {
-        min-height: 332px;
+      padding: 75px 35px 15px;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .form-page &__slogan {
+      width: 300px;
+      padding-top: 70px;
+      padding-bottom: 83px;
+      font-size: 50px;
+      line-height: 60px;
+      width: auto;
+       &_photo {/*
+        min-height: 332px;*/
         width: auto;
       }
     }
@@ -82,11 +125,10 @@
 @media @desktop-widths {
   .page-header {
     &__nav-wrapper {
-      .outline(#00f,'__nav-wrapper');
-      padding: 25px 0 40px;
+      padding: 25px 0 23px;
+      background: rgba(0, 0, 0, 0.3);
     }
     &__inner {
-      .outline(#0f0,'__nav-wrapper');
       width: 940px;
       margin: auto;
       display: flex;
@@ -94,6 +136,8 @@
     }
     &__head-line {
       padding: 0;
+      border: none;
+      box-shadow: none;
     }
     &__head-line-wrapper {
       width: auto;
@@ -110,9 +154,14 @@
       margin: 0;
     }
     &__slogan {
-      &_form {
-        min-height: 285px;
-      }
+      font-size: 50px;
+      line-height: 60px;
+      padding: 10px 30px 45px;
+    }
+    .form-page &__slogan {
+        padding-top: 60px;
+        padding-bottom: 104px;
+
     }
   }
 }

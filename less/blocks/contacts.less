@@ -1,26 +1,32 @@
 .contacts {
   .outline(#00c, '.contacts');
-  min-height: 612px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 300;
   .contacts__wrapper {
     .outline(#f00,'.contacts__wrapper');
     .container;
-    min-height: 445px;
+    min-height: 712px;
   }
   &__title {
-    .outline(#330,'.contacts__title',-40);
-    min-height: 120px;
+    .outline(#330,'');
+    padding: 40px 0 7px;
+    font-size: 24px;
+    color: @dark-blue;
   }
   &__list {
-    .outline(#330,'.contacts__title',-40);
+    .outline(#330,'',-40);
+    padding-top: 5px;
   }
   &__item {
-    .outline(#0f0,'.contacts__item');
-    min-height: 100px;
+    padding-top: 16px;
   }
   &__term {
-
+    font-size: 18px;
+    font-weight: 700;
   }
   &__description {
+    font-size: 24px;
     color: #d22856;
     a {
       color: #d22856;
@@ -32,7 +38,9 @@
   .contacts {
     min-height: 780px;
     &__title {
-      min-height: 155px;
+      padding: 50px 50px 7px;
+      font-size: 40px;
+      line-height: 45px;
     }
     &__list {
       display: flex;
@@ -42,7 +50,7 @@
       min-height: 245px;
     }
     &__item {
-      width: 250px;
+      width: 230px;
     }
   }
 }
@@ -52,9 +60,18 @@
     min-height: 868px;
     &__title {
       min-height: 200px;
+      padding: 60px 120px 30px;
+      font-size: 50px;
+      line-height: 60px;
     }
     &__list {
       min-height: 160px;
+    }
+    &__item:nth-child(2) {
+      order: 1;
+    }
+    &__description {
+      margin-top: 20px;
     }
   }
 }

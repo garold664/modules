@@ -1,16 +1,28 @@
 .announce {
   .outline(#d00,'.announce');
-  min-height: 160px;
   .container;
+  padding: 45px 0 34px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  &__hidden {
+    display: none;
+  }
 }
 
 @media @tablet-widths {
   .announce {
     min-height: 205px;
+    padding: 90px 30px 50px;
+    font-size: 18px;
+    &__hidden {
+      display: block;
+    }
   }
 }
-@media @tablet-widths {
+@media @desktop-widths {
   .announce {
     min-height: 170px;
+    padding: 90px 70px 35px;
   }
 }

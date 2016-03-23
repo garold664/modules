@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>nav-btn</title>
+  <style>
+  body {
+    background: #000;
+  }
+  a {
+    float: right;
+  }
+  .block {
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+    border: 10px solid #fff;
+    background: #f2f2f2;
+  }
+  .range-line {
+    position: relative;
+    width: 240px;
+    height: 2px;
+    margin: 50px;
+    background: #283645;
+  }
+  .range-line:after {
+    content: '';
+    position: absolute;
+    left: 65%;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #d22856;
+    border-radius: 10px;
+    background: #f2f2f2;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="block">
+    <div class="range-line"></div>
+  </div>
+</body>
+</html>
